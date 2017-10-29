@@ -7,18 +7,24 @@ module.exports = {
     ],
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'bundle.js',
+        filename: './bundle.js',
+    },
+    devServer: {
+        inline: true,
+        contentBase: './public',
+        port: 8080
     },
     module: {
-        rules: [
+        loaders: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    'babel-loader',
-                ],
-            },
-        ],
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015', 'react']
+                }
+            }
+        ]
     },
     resolve: {
         modules: [

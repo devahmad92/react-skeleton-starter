@@ -4,6 +4,8 @@
   "description": "A react skeleton starter using ES6,Babel and Webpack. Edit",
   "main": "main.js",
   "scripts": {
+    "compile": "webpack",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +29,8 @@
     "babel-loader": "^7.1.2",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^3.8.1"
+    "express": "^4.16.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.12.0"
   }
 }
